@@ -1,0 +1,11 @@
+.dashboard {
+    display: grid;
+    gap: 1.5rem 2rem;
+
+    @media screen and (min-width: calc(1051 / 16 * 1rem)) {
+        grid-template-columns: calc(255 / 16 * 1rem) 1fr;
+    }
+
+    margin: 0 auto;
+    width: min(100%, calc(1116 / 16 * 1rem));
+}

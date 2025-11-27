@@ -1,4 +1,14 @@
 .app {
+    align-content: center;
+
+    padding-block: clamp(5.0625rem, -0.6875rem + 23.9583vw, 10.8125rem);
+    padding-inline: clamp(1.5rem, -1.875rem + 14.0625vw, 4.875rem);
+
+    @media screen and (min-width: calc(768 / 16 * 1rem)) {
+        padding-block: clamp(10.8125rem, 5.1696rem + 11.756vw, 15.75rem);
+        padding-inline: clamp(4.875rem, -1.125rem + 12.5vw, 10.125rem);
+    }
+
     min-height: 100dvh;
     background-color: var(--clr-navy-950);
     color: var(--clr-navy-200);
