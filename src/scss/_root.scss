@@ -1,0 +1,41 @@
+:root {
+    // colors
+    --clr-white: rgb(255 255 255);
+    --clr-black: rgb(0 0 0);
+
+    --clr-navy-950: rgb(14 19 35);
+    --clr-navy-900: rgb(28 32 75);
+    --clr-navy-800: rgb(51 57 122);
+    --clr-navy-200: rgb(187 192 255);
+
+    --clr-orange-300: rgb(255 139 100);
+
+    --clr-purple-700: rgb(115 53 210);
+    --clr-purple-600: rgb(81 71 234);
+    --clr-purple-500: rgb(112 120 201);
+
+    --clr-blue-300: rgb(85 194 230);
+    --clr-pink-400: rgb(255 94 125);
+    --clr-green-400: rgb(75 207 130);
+    --clr-yellow-300: rgb(241 199 91);
+    --clr-grey-200: rgb(216 216 216);
+
+    // fonts
+    --ff-rubik: "Rubik", sans-serif;
+
+    --fw-300: 300;
+    --fw-400: 400;
+    --fw-500: 500;
+
+    --fs-32-56: clamp(2rem, 0.2857rem + 3.5714vw, 3.5rem);
+    --fs-24-40: clamp(1.5rem, 0.3571rem + 2.381vw, 2.5rem);
+    --fs-18: 1.125rem;
+    --fs-15: 0.9375rem;
+
+    --lh-38-66: clamp(2.375rem, 0.375rem + 4.1667vw, 4.125rem);
+    --lh-28-47: clamp(1.75rem, 0.3929rem + 2.8274vw, 2.9375rem);
+    --lh-21: calc(21 / 16 * 1rem);
+    --lh-18: calc(18 / 16 * 1rem);
+
+    --ls-0: 0;
+}

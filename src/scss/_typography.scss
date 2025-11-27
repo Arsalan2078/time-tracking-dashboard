@@ -1,0 +1,38 @@
+@layer {
+    [data-text-preset] {
+        font-family: var(--ff-rubik);
+        letter-spacing: var(--ls-0);
+    }
+
+    [data-text-preset="1"] {
+        font-weight: var(--fw-300);
+        font-size: var(--fs-32-56);
+        line-height: var(--lh-38-66);
+    }
+
+    [data-text-preset="2"] {
+        font-weight: var(--fw-300);
+        font-size: var(--fs-24-40);
+        line-height: var(--lh-28-47);
+    }
+
+    [data-text-preset="3-regular"],
+    [data-text-preset="3-medium"] {
+        font-size: var(--fs-18);
+        line-height: var(--lh-21);
+    }
+
+    [data-text-preset="3-regular"] {
+        font-weight: var(--fw-400);
+    }
+
+    [data-text-preset="3-medium"] {
+        font-weight: var(--fw-500);
+    }
+
+    [data-text-preset="4"] {
+        font-weight: var(--fw-400);
+        font-size: var(--fs-15);
+        line-height: var(--lh-18);
+    }
+}
