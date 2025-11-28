@@ -1,0 +1,8 @@
+.activities {
+    display: grid;
+    grid-template-columns: repeat(
+        auto-fit,
+        minmax(min(100%, calc(188 / 16 * 1rem)), 1fr)
+    );
+    gap: clamp(1.5rem, 0.1491rem + 2.0566vw, 2rem);
+}
