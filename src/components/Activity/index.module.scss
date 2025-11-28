@@ -1,3 +1,113 @@
 .activity {
-    background-color: var(--clr-navy-900);
+    border-radius: var(--br-15);
+    z-index: 0;
+
+    --_bg-color: var(--bg-color);
+    --_bg-image: var(--bg-image);
+
+    --bg-color-content: var(--clr-navy-900);
+
+    &:hover {
+    --bg-color-content: var(--clr-navy-800);
+
+    }
+
+    &[data-title="Work"] {
+        --bg-color: var(--clr-orange-300);
+        --bg-image: url("/images/icon-work.svg");
+    }
+
+    &[data-title="Play"] {
+        --bg-color: var(--clr-blue-300);
+        --bg-image: url("/images/icon-play.svg");
+    }
+
+    &[data-title="Study"] {
+        --bg-color: var(--clr-pink-400);
+        --bg-image: url("/images/icon-study.svg");
+    }
+
+    &[data-title="Exercise"] {
+        --bg-color: var(--clr-green-400);
+        --bg-image: url("/images/icon-exercise.svg");
+    }
+
+    &[data-title="Social"] {
+        --bg-color: var(--clr-purple-700);
+        --bg-image: url("/images/icon-social.svg");
+    }
+
+    &[data-title="Self Care"] {
+        --bg-color: var(--clr-yellow-300);
+        --bg-image: url("/images/icon-self-care.svg");
+    }
+
+    &::before {
+        position: relative;
+        margin-bottom: calc(-1 * var(--br-15));
+        z-index: -1;
+
+        display: block;
+        content: "";
+
+        border-top-left-radius: inherit;
+        border-top-right-radius: inherit;
+
+        --height-clamp: clamp(2.0625rem, 2.6875rem + -1.3021vw, 2.375rem);
+
+        @media screen and (min-width: calc(768 / 16 * 1rem)) {
+            --height-clamp: clamp(2.0625rem, 1.2054rem + 1.7857vw, 2.8125rem);
+        }
+
+        height: calc(var(--height-clamp) + var(--br-15));
+
+        background-color: var(--_bg-color);
+        background-image: var(--_bg-image);
+        background-repeat: no-repeat;
+        background-position-x: calc(100% - 1rem);
+    }
+}
+
+.content {
+    display: grid;
+    gap: clamp(0.5rem, 0rem + 2.0833vw, 1rem);
+
+    padding: clamp(1.5rem, 0.1491rem + 2.0566vw, 2rem);
+    border-radius: inherit;
+    background-color: var(--bg-color-content);
+
+    transition-property: background-color;
+    transition-duration: 0.15s;
+}
+
+.title {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    color: var(--clr-white);
+
+    > a:hover svg path {
+        fill: var(--clr-white);
+    }
+}
+
+.timeframe {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+
+    @media screen and (min-width: calc(474 / 16 * 1rem)) {
+        flex-direction: column;
+        align-items: start;
+        gap: 0.5rem;
+    }
+}
+
+.current {
+    color: var(--clr-white);
+}
+
+.previous {
+    color: var(--clr-navy-200);
 }

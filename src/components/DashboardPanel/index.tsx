@@ -1,3 +1,4 @@
+import jeremy from "/images/image-jeremy.png";
 import type { TimeframesKeys } from "../../libs/types";
 import css from "./index.module.scss";
 
@@ -15,10 +16,21 @@ export default function DashboardPanel({ timeframe, onTimeframeClick }: Props) {
 
     return (
         <div className={css.panel}>
-            <div data-text-preset="4">Report for</div>
-            <div data-text-preset="2">Jeremy Robson</div>
+            <div className={css.top}>
+                <img
+                    className={css.image}
+                    src={jeremy}
+                    width="64"
+                    height="64"
+                    alt="Jeremy"
+                />
+                <div>
+                    <div data-text-preset="4">Report for</div>
+                    <div data-text-preset="2">Jeremy Robson</div>
+                </div>
+            </div>
 
-            <ul data-text-preset="3-regular">
+            <ul className={css.list} data-text-preset="3-regular">
                 {buttons.map(({ onClick, name }, index) => (
                     <li key={index}>
                         <button onClick={onClick} disabled={timeframe === name}>
