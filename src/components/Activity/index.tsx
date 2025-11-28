@@ -1,4 +1,3 @@
-import ellipsis from "/images/icon-ellipsis.svg";
 import type { ActivityProps, TimeframesKeys } from "../../libs/types";
 import css from "./index.module.scss";
 
